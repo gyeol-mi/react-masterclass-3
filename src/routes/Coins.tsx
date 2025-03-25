@@ -76,7 +76,6 @@ function Coins() {
       // console.log(json);
       setCoins(json.slice(0, 100));
       setLoading(false);
-      // console.log(coins);
     })();
   }, []);
   return (
