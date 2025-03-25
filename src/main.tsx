@@ -1,13 +1,14 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom";
 import App from "./App.tsx";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./theme";
+import { theme } from "./theme";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <ThemeProvider theme={darkTheme}>
+ReactDOM.render(
+  <React.StrictMode>
+    <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
-  </StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
